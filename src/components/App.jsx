@@ -8,6 +8,8 @@ import Dashboard from './Dashboard';
 import Income from './Income';
 import Reviews from './reviews';
 import HostLayout from './HostLayout';
+import HostVans from "./host/vans.jsx"
+import HostVanDetails from "./host/vandetail.jsx"
 
 import '../server.js';
 
@@ -24,6 +26,8 @@ export default function App() {
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVanDetails />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
